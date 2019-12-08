@@ -47,10 +47,10 @@ class Forms extends CI_Controller
 			$n=$this->input->post('name');
 			$e=$this->input->post('email');
 		$getresult = $this->Registration_Model->fetchrecords($n,$e);
-		if(!empty($getresult))
-		{
-			redirect("Forms/Home");
-		}
+		// if(!empty($getresult))
+		// {
+		// 	redirect("Forms/Home");
+		// }
 			
 		}
 	}
