@@ -17,16 +17,13 @@ class Registration_Model extends CI_Model
 		$query=$this->db->get('users');
 		$result=$query->result();
 		//print_r($result);
-		if(empty($result))
+		if(!empty($result))
 		{
-			print_r("Incorrect username and password");
-		}
-		else
-		{
-			print_r("you are logged in");
+			$message = "you are logged in";
 		}
 	
 	
+	return $message;
 	}
 }
 
